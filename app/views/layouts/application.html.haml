@@ -1,0 +1,71 @@
+!!!
+%html
+  %head
+    %title CSRA
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    :css
+      body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+      }
+      
+    = stylesheet_link_tag "bootstrap.min"
+    = stylesheet_link_tag "bootstrap-responsive.min"
+    = stylesheet_link_tag "main"
+    = javascript_include_tag "modernizr-2.6.2-respond-1.1.0.min"
+    
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"}
+            %img.img-rounded#logo-image{:alt => "", :src => "/assets/csraLogo.png"}
+            %span#logo-placeholder LOGO
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a{:href => "index"} Home
+              %li
+                %a{:href => "about"} About
+              %li
+                %a{:href => "contact"} Contact
+              %li
+                %a{:href => "forum"} Forum
+              %li
+                %a{:href => "login"} Login
+          / /.nav-collapse
+    .container
+      = yield
+      %hr/
+      %footer
+        %p © CSRA
+    / /container
+    %script{:src => "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"}
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')    %script{:src => "js/vendor/bootstrap.min.js"}
+    %script{:src => "js/plugins.js"}
+    %script{:src => "js/main.js"}
+    :javascript
+          var tag = document.createElement('script');
+          tag.src = "https://www.youtube.com/player_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          var player;
+          function onYouTubePlayerAPIReady() {
+            player = new YT.Player('FeaturedShow', {
+              height: '390',
+              width: '640',
+              videoId: 'IDBkg8JJRHk',
+              enablejsapi: '1',
+              controls: '2'
+            });
+          }

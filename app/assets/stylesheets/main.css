@@ -1,0 +1,11 @@
+#logo-image {
+    position: absolute;
+    top: 4px;
+    left: 3em;
+    height: 1.5em;
+}
+
+#logo-placeholder {
+    position: relative;
+    left: -9999px;
+}
