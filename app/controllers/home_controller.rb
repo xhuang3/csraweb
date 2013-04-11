@@ -11,12 +11,4 @@ class HomeController < ApplicationController
   def contact
     @contact_active = "active"
   end
-  
-  def forum
-    @forum_active = "active"
-  end
-  
-  def login
-    @login_active = "active"
-  end
 end
