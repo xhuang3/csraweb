@@ -1,6 +1,13 @@
 CsraWeb::Application.routes.draw do
   root :to => "home#index"
   resource :home
+  match "about" => "home#about"
+  match "contact" => "home#contact"
+  match "forum" => "home#forum"
+  match "login" => "home#login"
+  match "index" => "home#index"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

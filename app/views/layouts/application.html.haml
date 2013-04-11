@@ -30,15 +30,15 @@
             %span#logo-placeholder LOGO
           .nav-collapse.collapse
             %ul.nav
-              %li.active
+              %li{:class => @home_active}
                 %a{:href => "index"} Home
-              %li
+              %li{:class => @about_active}
                 %a{:href => "about"} About
-              %li
+              %li{:class => @contact_active}
                 %a{:href => "contact"} Contact
-              %li
+              %li{:class => @forum_active}
                 %a{:href => "forum"} Forum
-              %li
+              %li{:class => @login_active}
                 %a{:href => "login"} Login
           / /.nav-collapse
     .container
